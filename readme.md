@@ -1,7 +1,7 @@
 
 # slush-hexo-theme
 
-Generate a hexo theme
+Generate a [hexo](https://hexo.io) theme
 
 [Yeoman version available too](https://github.com/tcrowe/generator-hexo-theme)
 
