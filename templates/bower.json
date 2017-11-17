@@ -1,0 +1,7 @@
+{
+  "name": "<%=name%>",
+  "version": "0.0.0",
+  "description": "<%=name%> hexo theme",
+  "private": true,
+  "dependencies": {}
+}

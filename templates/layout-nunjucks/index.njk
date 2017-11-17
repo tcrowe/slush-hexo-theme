@@ -1,0 +1,6 @@
+{% extends 'includes/layout.njk' %}
+
+{% block body %}
+  {% include 'includes/recent-posts.njk' %}
+  {% paginator() %}
+{% endblock %}
