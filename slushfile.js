@@ -92,7 +92,7 @@ copyFiles = function(cb){
   });
   steps.push(function(cb){
     debug('step: config');
-    return gulp.src(path.join(templatesPath, '_config.yml')).pipe(template(answers)).pipe(gulp.dest('./')).on('finish', cb).on('error', shutdown);
+    return gulp.src(path.join(templatesPath, '_config.yml')).pipe(template(answers)).pipe(conflict('./')).pipe(gulp.dest('./')).on('finish', cb).on('error', shutdown);
   });
   if (answers.other.indexOf('hexo-scripts') !== -1) {
     steps.push(function(cb){

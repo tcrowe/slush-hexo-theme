@@ -107,6 +107,7 @@ copyFiles = (cb) ->
     debug 'step: config'
     gulp.src path.join templatesPath, '_config.yml'
       .pipe template answers
+      .pipe conflict './'
       .pipe gulp.dest './'
       .on 'finish', cb
       .on 'error', shutdown
