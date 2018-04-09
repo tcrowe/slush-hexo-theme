@@ -22,7 +22,7 @@ scriptSrc = void 8;
 scriptName = void 8;
 scriptDest = void 8;
 defaults = {
-  name: path.basename(process.env.PWD),
+  name: path.basename(process.env.PWD || process.cwd()),
   tmpl: 'ejs',
   style: 'styl',
   other: []
