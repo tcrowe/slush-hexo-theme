@@ -130,6 +130,20 @@ npm run prd
 npm run clean
 ```
 
+07/02/2018: I tried running this with node v10.x and it didn't work and I don't know why. The message is not helpful to me.
+
+This version combination work as of 07/02/2018L
+
+```
+node -v
+# v9.11.2
+npm -v
+# 5.6.0
+gulp -v
+# ... CLI version 2.0.1
+# ... Local version 3.9.1
+```
+
 ---
 
 ## Thank you

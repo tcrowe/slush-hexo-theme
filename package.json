@@ -46,6 +46,6 @@
     "dev-test": "sleep 2 && nodemon -L -w slushfile.js -w test/index.js --exec npm test || true",
     "dev": "run-p dev-*",
     "prd": "NODE_ENV=production lsc -b -c -m linked slushfile.ls && npm test && npm run clean",
-    "test": "mocha --ui=tdd --timeout=90000 test/index.js"
+    "test": "mocha --ui=tdd --timeout=90000 --bail test/index.js"
   }
 }

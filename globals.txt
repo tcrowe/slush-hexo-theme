@@ -1,0 +1,12 @@
+/Users/tcrowe/.nvm/versions/node/v10.5.0/lib
+├── gulp-cli@2.0.1
+├── hexo-cli@1.1.0
+├── http-server@0.11.1
+├── livescript@1.5.0
+├── mocha@5.2.0
+├── npm@6.1.0
+├── npm-check-updates@2.14.2
+├── npms-cli@1.6.0
+├── slush@1.1.1
+└── slush-hexo-theme@0.1.1 -> /Users/tcrowe/git/slush-hexo-theme
+
