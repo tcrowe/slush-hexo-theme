@@ -116,37 +116,30 @@ Know another template language hexo users need?
 
 ### Development
 
-It uses [livescript](http://livescript.net) to compile the `slushfile.js`. It's
-handled automatically through the `dev` script.
-
 ```sh
-# watch the files, re-compile, and test
+# test the development build
+# it's faster than prd script
 npm run dev
 
 # build before publishing
+# prd = production build
 npm run prd
 
 # clean up the test site
 npm run clean
 ```
 
-07/02/2018: I tried running this with node v10.x and it didn't work and I don't know why. The message is not helpful to me.
+`npm run prd` does everything needed:
 
-This version combination work as of 07/02/2018L
++ clean
++ link
++ test
 
-```
-node -v
-# v9.11.2
-npm -v
-# 5.6.0
-gulp -v
-# ... CLI version 2.0.1
-# ... Local version 3.9.1
-```
+If you want to add a template language please copy one and port it so it keeps roughly the same structure.
 
 ---
 
-## Thank you
+## Thank you contributors
 
 + [moosoul](https://github.com/moosoul)
 + [jonashao](https://github.com/jonashao)
@@ -154,5 +147,5 @@ gulp -v
 ## Resources
 
 + Theme docs https://hexo.io/docs/themes.html
-+ Submit your theme whttps://github.com/hexojs/hexo-theme-unit-test
++ Submit your theme https://github.com/hexojs/hexo-theme-unit-test
 + Slush docs http://slushjs.github.io

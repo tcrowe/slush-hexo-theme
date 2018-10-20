@@ -11,41 +11,48 @@
   "repository": "https://github.com/tcrowe/slush-hexo-theme.git",
   "license": "UNLICENSED",
   "keywords": [
-    "alttechnet",
-    "livescript",
     "slush",
     "hexo",
     "theme",
     "generator",
     "slushgenerator"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "devDependencies": {
-    "hexo-cli": "^1.0.3",
-    "js-yaml": "^3.10.0",
-    "livescript": "^1.5.0",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-unicorn": "^6.0.1",
+    "hexo": "^3.8.0",
+    "hexo-cli": "^1.1.0",
+    "js-yaml": "^3.12.0",
     "mkdirp": "^0.5.1",
-    "mocha": "^4.0.1",
-    "nodemon": "^1.12.1",
-    "npm-run-all": "^4.1.1"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.14.3",
+    "should": "^13.2.3"
   },
   "dependencies": {
-    "async": "^2.5.0",
-    "debug": "^3.1.0",
+    "async": "^3.0.1-0",
+    "debug": "^3.2.6",
     "gulp": "^3.9.1",
     "gulp-conflict": "^0.4.0",
     "gulp-fix-json": "0.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-template": "^4.0.0",
-    "inquirer": "^3.3.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-template": "^5.0.0",
+    "inquirer": "^6.2.0",
     "minimist": "^1.2.0"
   },
   "scripts": {
     "clean": "rm -rf test/site",
-    "dev-lsc-slushfile": "NODE_ENV=development lsc -b -c -w -m linked slushfile.ls || true",
-    "dev-lsc-test": "NODE_ENV=development lsc -b -c -w -m linked test/index.ls || true",
-    "dev-test": "sleep 2 && nodemon -L -w slushfile.js -w test/index.js --exec npm test || true",
-    "dev": "run-p dev-*",
-    "prd": "NODE_ENV=production lsc -b -c -m linked slushfile.ls && npm test && npm run clean",
-    "test": "mocha --ui=tdd --timeout=90000 --bail test/index.js"
+    "link": "npm unlink . && npm link .",
+    "prettier": "prettier --write {slushfile.js,test/index.js}",
+    "eslint": "eslint --fix {slushfile.js,test/index.js}",
+    "test": "mocha",
+    "dev": "run-s link test",
+    "prd": "run-s clean link test"
   }
 }
